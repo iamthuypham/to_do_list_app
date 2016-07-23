@@ -1,2 +1,3 @@
 # to_do_list_app
-This is project, original from Bloc Software Engineer Training program, and recreated to fit personal use
+This is first project original from Bloc Software Engineer Training program
+The app will be recreated to fit personal use
