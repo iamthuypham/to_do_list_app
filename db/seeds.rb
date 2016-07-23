@@ -13,7 +13,7 @@ require 'random_data'
    name:     'Admin01',
    email:    'admin01@example.com',
    password: 'helloworld',
-   role:     'admin'
+   # role:     'admin'
  )
  
  # Create a member
@@ -25,6 +25,3 @@ require 'random_data'
  
  puts "Seed finished"
  puts "#{User.count} users created"
- puts "#{Post.count} posts created"
- puts "#{Comment.count} comments created"
- puts "#{Vote.count} votes created"
