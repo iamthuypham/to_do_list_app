@@ -1,3 +1,25 @@
-<h1>Welcome to Productivity Toolbox</h1>
-<h3>1. To-do List</h3>
-<p>This tool is created based on The Just Do It Scribble idea from The Happiness Equation book (Neil Pasricha)</p>
+ <div class="jumbotron">
+   <h1>Blocitoff</h1>
+   <p>Blocitoff is the only To-Do list that actually help you complete tasks</p>
+   <% if current_user %>
+      Here is one of my blog showing you <%= link_to "The correct way to use to-do list!" %>
+   <% else %>
+      <%= link_to "Sign In", new_user_session_path %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+    <% end %>
+ </div>
+ 
+ <div class="row">
+   <div class="col-md-4">
+     <h2>To-do List</h2>
+     <p>This tool is created based on The Just Do It Scribble idea from The Happiness Equation book (Neil Pasricha)</p>
+   </div>
+   <div class="col-md-4">
+     <h2>Kele</h2>
+     <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </p>
+   </div>
+   <div class="col-md-4">
+     <h2>Tetriage</h2>
+     <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </p>
+   </div>
+ </div>

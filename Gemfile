@@ -38,3 +38,5 @@ source 'https://rubygems.org'
  gem 'figaro', '1.0'
  # Used to redirect_to 
  gem 'responders', '~> 2.0'
+ # Add Devise
+ gem 'devise'
