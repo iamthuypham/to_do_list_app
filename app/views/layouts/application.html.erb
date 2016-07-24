@@ -11,12 +11,19 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <li><%= link_to "Home", welcome_index_path %></li>
-      <li><%= link_to "To-Do", todo_path %></li>
+      <li><%= link_to "Blocitoff", todo_path %></li>
       <li><%= link_to "Kele", todo_path %></li>
       <li><%= link_to "Tetriage", todo_path %></li>
       <div class="pull-right user-info">
-        <%= link_to "Sign In", new_session_path %> or
-        <%= link_to "Sign Up", new_user_path %>
+        <% if current_user %>
+          <div class="pull-right">
+            <%= link_to current_user.name.capitalize, user_path(current_user) %> | 
+            <%= link_to "Sign Out", session_path(current_user), method: :delete %>
+          </div>
+        <% else %>
+            <%= link_to "Sign In", new_session_path %> or
+            <%= link_to "Sign Up", new_user_path %>
+        <% end %>
       </div>
     </ul>
     <div class = "flash">

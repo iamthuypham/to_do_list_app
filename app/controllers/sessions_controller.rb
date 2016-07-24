@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       create_session(user)
-      flash[:notice] = "Welcome, #{user.name}!"
+      flash[:notice] = "Alright, #{user.name.capitalize}! It's time for something fun and productive"
       redirect_to root_path
     else
       flash.now[:alert] = 'Invalid email/password combination'
