@@ -11,20 +11,17 @@ require 'random_data'
  # Create an admin user
  admin = User.create!(
    name:     'Admin01',
-   email:    'admin01@example.com',
+   email:    'admin01@gmail.com',
    password: 'helloworld',
-   role:     'admin'
+   # role:     'admin'
  )
  
  # Create a member
  member = User.create!(
    name:     'Member User',
-   email:    'member@example.com',
+   email:    'member@gmail.com',
    password: 'helloworld'
  )
  
  puts "Seed finished"
  puts "#{User.count} users created"
- puts "#{Post.count} posts created"
- puts "#{Comment.count} comments created"
- puts "#{Vote.count} votes created"
