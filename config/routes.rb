@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
 
-  # get 'users/create'
-
-  # get 'users/new'
-
-  devise_for :users
-  resources :users, only: [:show]
-  # resources :sessions, only: [:new, :create, :destroy]
+  
+  
+  resources :users, only: [:new, :create, :show]
+  resources :sessions, only: [:new, :create, :destroy]
   
   get 'welcome/index'
   root 'welcome#index'
