@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20160726201938) do
 
   add_index "items", ["user_id"], name: "index_items_on_user_id"
 
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "items", ["user_id"], name: "index_items_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
