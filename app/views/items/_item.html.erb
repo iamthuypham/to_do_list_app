@@ -1,7 +1,8 @@
-<div class="media">
+<div class="media" id="item-<%= item.id %>">
    <div class="media-body">
      <h4 class="media-heading">
-       <%= link_to item.name, item_path(item.id) %>
+        <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+        <%= link_to item.name, item_path(item.id) %>
      </h4>
      <small>
         assigned to <%= item.user.email %>
