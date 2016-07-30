@@ -5,8 +5,15 @@
         <%= link_to item.name, item_path(item.id) %>
      </h4>
      <small>
-        assigned to <%= item.user.email %>
-        submitted <%= time_ago_in_words(item.created_at) %> ago
+        Assigned to <%= item.user.email %>
+        </br>
+        <% if Time.now - item.created_at >= 7.days  %>
+          Overdued
+        <% else %>
+          <%= distance_of_time_in_words(Time.now - item.created_at, 7.days, include_seconds: true) %> left to complete
+        <% end %>
+        </br>
+        Created at <%= item.created_at %>
      </small>
    </div>
 </div>

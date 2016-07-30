@@ -27,7 +27,9 @@ users = User.all
 30.times do
  Item.create!(
   name: Faker::Lorem.sentence(10),
-  user: users.sample
+  user: users.sample,
+  created_at: Faker::Date.between(20.days.ago, 4.days.ago),
+  updated_at: Faker::Date.between(3.days.ago, Date.today)
  )
 end
 items = Item.all
