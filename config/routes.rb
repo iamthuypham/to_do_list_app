@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-
   devise_for :users
   resources :users, only: [:show] do
-    resources :items, only: [:new, :create, :show, :index, :edit]
+    resources :items
   end
+
+  
+  # authenticated :user do
+  #   root to: 'welcome#index', as: :authenticated_root
+  # end
+  # root to: redirect('/users/sign_in')
   
   get 'welcome/index'
   root 'welcome#index'
